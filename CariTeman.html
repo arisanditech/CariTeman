@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Selamat Datang</title>
+	<script type="text/javascript">
+		function findfriends() {
+			let nama = document.getElementById("find");
+			let Isname = nama.nama_cari.value;
+			alert("Kata cari " + nama.nama_cari.value);
+			document.getElementById("katacari").innerHTML = Isname;
+			console.log(Isname);
+
+			if (Isname == "Agis") {
+				console.log("Agis dah ketemu !!!!");
+				document.getElementById("katacari").style="color: blue";
+			}
+			else{
+				console.log("Ini Bukan Agis");
+				document.getElementById("katacari").style="color: red";
+			}
+			// body...
+		}
+	</script>
+</head>
+<body>
+	<form id="find">
+		Find Friends 
+		<input type="text" name="nama_cari" value="" size="30"/>
+		<input type="button" name="proses_cari" value="Go" onClick="findfriends()"/>
+	</form><hr>
+	<div style="width: 300px; border: 25px solid green; padding: 25px; margin: 25px;">
+		nama yang anda carii <span id="katacari"></span>
+	</div>
+</body>
+</html>
